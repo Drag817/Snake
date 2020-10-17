@@ -8,8 +8,8 @@ FLAGS =-Wall -std=c++11
 
 all: $(BIN_DIR)/main
 
-$(BIN_DIR)/main: $(BUILD_DIR)/Snake.o $(BUILD_DIR)/functions.o
-	g++ $(FLAGS) $(BUILD_DIR)/Snake.o $(BUILD_DIR)/functions.o -o $(BIN_DIR)/main
+$(BIN_DIR)/main: $(BUILD_DIR)/Snake.o 
+	g++ $(FLAGS) $(BUILD_DIR)/Snake.o -o $(BIN_DIR)/main
 
 $(BUILD_DIR)/Snake.o:
 	g++ $(FLAGS) -c $(SRC_DIR)/Snake.cpp -o $(BUILD_DIR)/Snake.o
