@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-#include <conio.h>
 
 using namespace std;
 
@@ -58,6 +57,7 @@ void Draw()
     cout << "Score: " << score << endl;
 }
 
+/*
 void Input()
 {
     if (_kbhit()) {
@@ -84,6 +84,7 @@ void Input()
         }
     }
 }
+*/
 
 void Logic()
 {
@@ -144,7 +145,7 @@ int main()
     Setup();
     while (!gameOver) {
         Draw();
-        Input();
+        // Input();
         Logic();
     }
     return 0;
