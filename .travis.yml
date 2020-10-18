@@ -5,4 +5,4 @@ dist: xenial
 
 script:
   - git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
-  - g++ Snake.cpp
+  - g++ Snake/Snake.cpp
