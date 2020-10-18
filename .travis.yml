@@ -2,4 +2,4 @@ os: windows
 language: cpp
 
 script:
-- cl /EHsc Snake.cpp
+- ./configure && make
