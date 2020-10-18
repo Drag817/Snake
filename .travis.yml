@@ -6,4 +6,5 @@ dist: xenial
 
 script:
   - git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
+  - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
   - make
