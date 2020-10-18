@@ -1,8 +1,5 @@
+os: windows
 language: cpp
-compiler: g++
-
-dist: xenial
 
 script:
-  - git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
-  - g++ Snake/Snake.cpp
+- cl /EHsc Snake.cpp
