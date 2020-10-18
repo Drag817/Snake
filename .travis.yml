@@ -5,4 +5,5 @@ install:
 - choco install make
 
 script:
+- git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
 - make
