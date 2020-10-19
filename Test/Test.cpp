@@ -9,14 +9,12 @@ namespace Test
 	TEST_CLASS(Test)
 	{
 	public:
-		
 		TEST_METHOD(TestInput)
 		{
 		const char v = 'g';
 		Input(v);
 		Assert::IsTrue(v != dir);
 		}
-
         TEST_METHOD(TestLogic1)
         {
             int k[100], j[55];
@@ -25,3 +23,4 @@ namespace Test
         }
 	};
 }
+
