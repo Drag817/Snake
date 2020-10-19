@@ -1,16 +1,9 @@
 os: windows
 language: cpp
 
-env:
-- MSBUILD_PATH="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin"
-
 install:
-- choco install visualstudio2019buildtools —package-parameters "--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
-- choco install dotnetcore-sdk
-- choco install nuget.commandline —pre
-- dotnet restore
-- nuget restore
+- choco install make
 
 script:
-- export PATH=$MSBUILD_PATH:$PATH
-- MSBuild.exe Snake.sln
+- git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
+- make
