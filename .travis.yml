@@ -2,7 +2,7 @@ os: windows
 language: cpp
 
 install:
-  - choco install visualstudio2019testagent
+  - choco install visualstudio2019buildtools
   - choco install make
 
 script:
