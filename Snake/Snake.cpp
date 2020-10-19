@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <conio.h>
 
 using namespace std;
@@ -9,6 +9,7 @@ const int height = 20;
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100];
 int nTail;
+char _input;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
 
@@ -58,10 +59,11 @@ void Draw()
     cout << "Score: " << score << endl;
 }
 
-void Input()
+void Input(char k)
 {
+    k = _getch();
     if (_kbhit()) {
-        switch (_getch()) {
+        switch (k) {
         case 'a':
             if (dir != RIGHT)
                 dir = LEFT;
@@ -85,10 +87,8 @@ void Input()
     }
 }
 
-void Logic()
+void Logic(int prevX, int prevY)
 {
-    int prevX = tailX[0];
-    int prevY = tailY[0];
     int prev2X, prev2Y;
     tailX[0] = x;
     tailY[0] = y;
@@ -144,8 +144,8 @@ int main()
     Setup();
     while (!gameOver) {
         Draw();
-        Input();
-        Logic();
+        Input(_input);
+        Logic(tailX[0], tailY[0]);
     }
     return 0;
 }
