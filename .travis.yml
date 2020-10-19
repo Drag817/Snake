@@ -2,11 +2,8 @@ os: windows
 language: cpp
 
 install:
-  - choco install visualstudio2019buildtools
   - choco install make
 
 script:
   - git ls-files Snake/ | xargs clang-format -i && git diff --exit-code
   - make
-  - make test
-  - make runtest
