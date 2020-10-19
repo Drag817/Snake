@@ -14,8 +14,11 @@ $(BIN_DIR)/main: $(BUILD_DIR)/Snake.o
 $(BUILD_DIR)/Snake.o:
 	g++ $(FLAGS) -c $(SRC_DIR)/Snake.cpp -o $(BUILD_DIR)/Snake.o
 	
+test: $(BUILD_DIR)/test.o
+	g++ $(FLAGS) $(BUILD_DIR)/test.o -o $(BIN_DIR)/test
+
 $(BUILD_DIR)/test.o:
-	g++ $(FLAGS) -c $(TEST_DIR)/Test.cpp -o $(BUILD_DIR)/Test.o
+	g++ $(FLAGS) -c $(TEST_DIR)/Test.cpp -o $(BUILD_DIR)/test.o
 	
 run: 
 	./bin/main
