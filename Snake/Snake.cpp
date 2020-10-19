@@ -59,7 +59,6 @@ void Draw()
     cout << "Score: " << score << endl;
 }
 
-
 void Input(char k)
 {
     k = _getch();
@@ -88,8 +87,7 @@ void Input(char k)
     }
 }
 
-
-void Logic(int prevX,int prevY)
+void Logic(int prevX, int prevY)
 {
     int prev2X, prev2Y;
     tailX[0] = x;
